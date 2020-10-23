@@ -1,0 +1,27 @@
+service: memendous
+
+provider:
+  name: aws
+  runtime: nodejs12.*
+  stage: prod
+  region: us-east-2
+  environment:
+    IMAGES_DIR: ./images/
+    TEXT_SIZE: 50
+    TEXT_PADDING: 40
+
+plugins:
+  - serverless-apigw-binary
+
+custom:
+  apigwBinary:
+    types:
+      - '*/*'
+
+functions:
+  meme:
+    handler: handler.meme
+    events:
+      - http:
+          path: /
+          method: get

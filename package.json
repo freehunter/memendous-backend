@@ -1,0 +1,26 @@
+{
+  "name": "memendous",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "dependencies": {
+    "gm": "^1.23.0"
+  },
+  "devDependencies": {
+    "serverless-apigw-binary": "^0.4.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freehunter/memendous-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freehunter/memendous-backend/issues"
+  },
+  "homepage": "https://github.com/freehunter/memendous-backend#readme"
+}
