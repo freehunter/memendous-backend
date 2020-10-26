@@ -16,6 +16,15 @@ import json
 
 def meme(event, context):
     
+    try:
+        top_text = json.dumps(event['queryStringParameters']['top']).strip('\"')
+    except:
+        top_text = "lol i forgot"
+    try:
+        bottom_text = json.dumps(event['queryStringParameters']['bottom']).strip('\"')
+    except:
+        bottom_text = "to add any text"
+    
     #TODO
     # 1. Read images from S3
     # 2. Put text in correct place
@@ -41,9 +50,15 @@ def meme(event, context):
     d = ImageDraw.Draw(txt)
 
     # draw text, half opacity
-    d.text((10,10), "Hello", font=fnt, fill=(255,255,255,128))
-    # draw text, full opacity
-    d.text((10,60), "Roboto", font=fnt, fill=(255,255,255,255))
+    if top_text != "":
+        d.text((10,10), top_text, font=fnt, fill=(255,255,255,128))
+    else: 
+        d.text((10,10), "lol i forgot", font=fnt, fill=(255,255,255,128))
+    if bottom_text != "":
+        # draw text, full opacity
+        d.text((10,60), bottom_text, font=fnt, fill=(255,255,255,255))
+    else:
+        d.text((10,60), "to add text here", font=fnt, fill=(255,255,255,255))
 
     out = Image.alpha_composite(base, txt)
     
