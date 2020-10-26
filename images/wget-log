@@ -1,0 +1,11 @@
+--2020-10-26 17:53:49--  https://www.haptik.ai/hs-fs/hubfs/Tech%20Blog/Putting%20Text%20on%20Image%20Using%20Python/background.png?width=1470
+Resolving www.haptik.ai (www.haptik.ai)... 104.17.115.180, 104.17.114.180, 104.17.113.180, ...
+Connecting to www.haptik.ai (www.haptik.ai)|104.17.115.180|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2605 (2.5K) [image/png]
+Saving to: ‘background.png?width=1470’
+
+background.png?width=1470              0%[                                                                       ]       0  --.-KB/s               background.png?width=1470            100%[======================================================================>]   2.54K  --.-KB/s    in 0s      
+
+2020-10-26 17:53:49 (61.3 MB/s) - ‘background.png?width=1470’ saved [2605/2605]
+
