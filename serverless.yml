@@ -23,3 +23,10 @@ functions:
       - http:
           path: /
           method: get
+  quote:
+    handler: handler.quote
+    layers: arn:aws:lambda:us-east-2:512794413931:layer:pillow:1
+    events:
+      - http:
+          path: /quote
+          method: get
